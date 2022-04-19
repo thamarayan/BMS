@@ -1,0 +1,832 @@
+/* Header */
+
+.navbar{
+    background-color: white !important;
+    padding:0% 2% !important;
+}
+
+.logoImg{
+    width: 50%;
+}
+
+.nav-link{
+    font-weight: bold;
+    margin: 0% 0.5em;
+    color: #000D6B !important;
+}
+
+.nav-link:hover{
+    color: green !important;
+}
+
+/* Index Page */
+
+/* Carousels */
+.carouselImage1{
+    width: 120%;
+    padding: 0% 5% -1% 30%;
+}
+
+.carouselImage2{
+    width: 90%;
+    padding: 10% 5% 10% 30%;
+}
+
+.carousel-h1{
+    font-size: 5rem;
+    font-family:'Bebas Neue', cursive;;
+    padding: 10% 5% 5%;
+    line-height: 5rem;
+}
+
+.carousel-h1-1{
+    font-size: 5rem;
+    font-family:'Bebas Neue', cursive;
+    padding: 18% 5% 5%;
+    line-height: 5rem;
+}   
+
+.carousel-h3{
+    padding: 0% 5% 5%;
+}
+
+.subwords{
+    color: black; 
+    font-weight: bold; 
+    border-radius: 10px; 
+    background-color:tomato; 
+    padding: 2%;
+}
+
+
+.cf-index2{
+    padding: 2% 7% !important;
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: linear-gradient(to right, #e8e8ff, #e8e8ff 5px, #ffffff 5px, #ffffff );
+    background-size: 10px 100%;
+}
+
+
+.index1Left{
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+    padding-left: 2%;
+    opacity: 0.4;
+}
+
+.frontImg{
+    position: relative;
+    width: 80%;
+    top: 8rem;
+    left: 4rem;
+}
+
+.index-h1{
+    font-family: 'Yeseva One', cursive;
+    color: #000D6B;
+    align-items: center;
+    font-size: 5rem;
+    padding-top: 15%;
+}
+
+.index-h2{
+    font-family: 'Yeseva One', cursive;
+    color: green;
+    font-weight: bold;
+}
+
+.btnShop{
+    background-color: #000D6B !important;
+}
+
+.index-h1-os{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.index-h1-os > span{
+    color: white; 
+    background-color: green; 
+    color: white; 
+    padding: 3px 6px; 
+    border-radius: 2px;
+}
+
+.hiw-row{
+    text-align: center;
+    padding: 5%;
+}
+
+.hiw-icons{
+    font-size: 5rem;
+    color: green;
+}
+
+.hiw-h5{
+    color: #000D6B;
+}
+
+.products-index{
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive; 
+    text-align: center;
+    padding: 0.75rem;
+    color: #000D6B;
+    text-align: left;
+}
+
+.sectionHeader{
+    font-family: 'Bebas Neue', cursive;
+    padding: 3px 5px;
+    background-color:#000D6B;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5rem !important;
+}   
+
+.cf-index3{
+    padding: 0% 8% 2% !important;
+}
+
+.portfolio-item{
+    position: relative;
+}
+
+.portfolio-item:hover{
+    transform: scale(1.1);
+}
+
+.mr-btn-45{
+    margin-bottom: 50px;
+}
+
+.mr-btn-45-1{
+    margin-bottom: 0%;
+}
+
+.product-tag{
+    font-size: 11px;
+    color: #6c757d;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+figure{
+    margin-bottom: 0% !important;
+}
+
+figure > a > img{
+    border-radius: 5px !important;
+}
+
+.more_products{
+    text-align: center;
+    padding-bottom: 0.75rem;
+}
+
+.btn-pr{
+    border-radius: 0% !important;
+    color: #000D6B !important;
+    font-weight: bold !important;
+}
+
+.btn-pr:hover{
+    color: white !important;
+}
+
+.cf-index4{
+    padding: 2% 5% 2% !important;
+    text-align: center;
+    background-color: #eee;
+}
+
+.bottomLine{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 0px;
+    height: 5px !important;
+    width: 40px;
+    background-color: #000D6B;
+    opacity: 1;
+    display: inline-block;
+}
+
+.index4-h2{
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.carousel-div{
+    padding: 2% 15%;
+}
+
+.brands-h1{
+    color: #000D6B;
+    text-align: center;
+}
+
+.cf-brands{
+    padding: 2% 4% 6%;
+}
+
+.cf-smallBanners{
+    padding: 2% 7% !important;
+    background-color:#F6F6F6;
+}
+
+/* Item Carousel */
+
+.MultiCarousel { float: left;  overflow: hidden; padding: 15px 15px 0px 15px; width: 100%; position:relative; }
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+.MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px;  background:white; color:#666;}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; top:calc(50% - 20px); }
+.MultiCarousel .leftLst { left:0; }
+.MultiCarousel .rightLst { right:0; }
+    
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:white; color:blue }
+
+.lead{
+  font-weight:100;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.MultiCarousel-inner > .item > .card{
+  border-radius: 1rem;
+  border:1px solid #ccc;
+  box-shadow: 1px 1px #ccc;
+} 
+
+.MultiCarousel-inner > .item > .card:hover{
+  transform: scale(1.025);
+}
+
+.fiveCol{
+  background-color: #f5f5f5;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.px-5{
+  padding-top: 1rem !important;
+}
+
+.mx-1{
+  margin-right: 1rem !important;
+}
+
+/* Products Page */
+
+.product-dprice{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.product-oprice{
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: red;
+}
+
+.prod-head{
+    background-image: url('../images/bannerFront.jpg');
+}
+
+.prod-h1{
+    padding: 10% 0% 10% 5%;
+}
+
+.prod-title{
+    font-weight: bold;
+    padding: 2%;
+    text-align: center;
+}
+
+.prod-head-div{
+    padding:0% 7% !important;
+    text-align: center;
+}
+
+.title-desc{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.bottomLine1{
+    margin-top: 20px;
+    /* margin-bottom: 40px; */
+    border: 0;
+    border-top: 0px;
+    height: 5px !important;
+    width: 40px;
+    background-color: #000D6B;
+    opacity: 1;
+    display: inline-block; 
+}
+
+.miniCateg{
+    transition:ease-in;
+}
+
+.miniCateg:hover{
+   transform: scale(1.1);
+}
+
+.cf-pro{
+    padding: 2% 8% !important;
+}
+
+.categ-title{
+    padding-bottom: 1.5rem;
+}
+
+.categLinks{
+    text-decoration: none;
+    color: black;
+}
+
+.list-group-item{
+    border-width: 1px !important;
+}
+
+.list-group-flush{
+    margin: 0% 4% !important;
+}
+
+.prodLinks{
+    text-decoration: none;
+    color: #000D6B;
+    font-weight: bold;
+}
+
+.prodLinks:hover{
+    color: #81B214;
+}
+
+/* product page */
+
+.cf-productPage{
+    padding: 2% 6% !important;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: white !important;
+    color: black !important;
+}
+
+.accordion-item{
+    border: none !important;
+}
+
+.benefit{
+    padding: 2% 2% !important;
+    text-align: center;
+}
+
+
+.benefits .benefit i{
+    font-size: 4rem;
+    /* background: #3c4bc5; */
+    color: #000D6B;
+    padding: 20px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.benefits .benefit header{
+    font-weight: bold;
+    color: #000D6B;
+    font-size: 1rem;
+}
+
+.fill-gray{
+    background-color: #f6f6f6;
+}
+
+.benefitsCol{
+    padding: 2% 4%;
+}
+
+/* Home Care */
+
+.cf-homecare{
+    padding: 2% 5% !important;
+}
+
+.listItems{
+    font-weight: bold;
+    border: none !important;
+    background-color: #f1f1f1 !important;
+}
+
+.listItems:hover{
+    background-color: #ffffff !important;
+}
+
+.modal-dialog1 {
+    max-width: 850px !important;
+    margin: 2rem auto !important;
+}
+
+.btn-close{
+    color: white !important;
+}
+
+.productDetailsHead{
+    background-color:#000D6B;
+    color: white;
+    font-weight: bold;
+}
+
+.brand{
+    padding: 2% 0% !important;
+}
+
+/* Image Overlay */
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+/* HMF Products */
+
+.cf-owlCarousel{
+    padding: 0% 7% !important;
+}
+
+.product-item{
+    border: 1px solid rgb(219,219,219);
+}
+
+.product-img{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.btns{
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+}
+
+.btns button{
+    border: none;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btns button:hover{
+    color: #000D6B ;
+}
+
+.product-img:hover .btns{
+    bottom: 0;
+}
+
+.heart-icon{
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    font-size: 18px;
+}
+
+.product-type{
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.product-name{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.product-name:hover{
+    color: #000D6B !important;
+}
+
+/* HMF page */
+
+#hmf{
+    padding: 3% !important;
+}
+
+.cf-prodCart{
+    padding: 0% !important;
+}
+
+.pageLinks{
+    color: black;
+    text-decoration: none;
+}
+
+.categTitle{
+    text-align: center;
+    color: #000D6B;
+    padding-top: 2%;
+}
+
+.categDisc{
+    text-align: center;
+}
+
+.productsArea{
+    padding: 0% !important;
+}
+
+/* .accordion-button:not(.collapsed){
+    color: white !important;
+    background-color: #000d6b !important;
+} */
+
+.accordion-button{
+    font-weight: bold !important;
+}
+
+/* Registration */
+
+.cf-registration{
+    padding: 2% 7% !important;
+}
+
+/* aboutUs */
+
+.cf-aboutUs{
+    padding: 2% 7% !important;
+}
+
+.aboutUs{
+    text-align: justify;
+    padding: 2% 2%;
+}
+
+.aboutUs-h2{
+    padding: 2% 2% 0%;
+    font-weight: bold;
+    color: #000D6B;
+}
+
+/* footer */
+
+.cf-footer{
+    background-color: #000D6B;
+    color: white;
+    padding: 2% 4% !important;
+}
+
+.bottomLine2{
+    
+    border: 0;
+    border-top: 0px;
+    height: 5px !important;
+    width: 40px;
+    background-color: #81B214;
+    opacity: 1;
+    display: inline-block;
+}
+
+.footer1{
+    padding: 0% 2%;
+}
+
+.listgrp{
+    background-color: #000D6B !important;
+    color: #ddd !important;
+    padding: 0.5rem 0rem !important;
+    border: none !important;
+}
+
+.listgrp:hover{
+    padding: 0.5rem 0.5rem !important;
+    color: white !important;
+    font-size: bold !important;
+}
+
+/* SignIn Page */
+.cf-signin{
+    padding: 2% 10% !important;
+}
+
+.form-control{
+    margin-top: 2% !important;
+    width: 75% !important;
+}
+
+.form-signin {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.signin-img{
+    width: 100%;
+    padding-top: 3rem;
+}
+
+/* Shopping Cart */
+
+.cf-shoppingCart{
+    padding: 2% 5% !important;
+}
+
+/* profile */
+.cf-profile{
+    padding: 2% 7% !important;
+}
+
+/* checkout */
+.cf-checkout{
+    padding: 2% 5% !important;
+}
+
+.fc-checkout{
+    width: 90% !important;
+}
+
+/* control */
+
+.cf-dashboard{
+    padding: 2% 7% !important;
+}
+
+.cf-productsControl{
+    padding: 2% 7% !important;
+    text-align: center;
+}
+
+.ctrlProdHead{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000D6B;
+    padding-top: 2%;
+}
+
+.productBtn{
+    padding: 1%;
+}
+
+
+/* back to top */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: blue; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 7px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:60px;
+	left:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+  -webkit-animation: bounce 3s infinite alternate;
+  -moz-animation: bounce 3s infinite alternate;
+  animation: bounce 3s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+    to { -webkit-transform: scale(1.05); }
+  }
+  @-moz-keyframes bounce {
+    to { -moz-transform: scale(1.05); }
+  }
+  @keyframes bounce {
+    to { transform: scale(1.05); }
+  }
+
+.my-float{
+	margin-top:-16px;
+    vertical-align: -0.325rem !important;
+}
+
+.animate__animated{
+    --animate-duration: 3s;
+}
+
+.animate__animated.animate__bounceInRight{
+    --animate-duration: 3s;
+}
+
+.animate__animated.animate__flipInX{
+    --animate-duration:1s;
+}
+
+/* Animations */
+
+.reveal{
+    position: relative;
+    transform: translateY(75px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  .reveal1{
+    position: relative;
+    transform: translatex(-15%);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .reveal1.active{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+.cf-ordersDashboard, .cf-emiOrdersDashboard{
+    padding: 2% 5% !important;
+}
+
+.cf-ordersDashboard .modal-dialog{
+    max-width: 900px !important;
+}

@@ -1,0 +1,262 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-homecare">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>HOSPITAL BEDS</h3>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="bi bi-house-fill" style="color: black;"></i></a></li>
+                  <li class="breadcrumb-item" aria-current="page"><a href="/products" class="pageLinks">PRODUCTS</a></li>
+                  <li class="breadcrumb-item" aria-current="page"><a href="/category/hospitalFurnitures" class="pageLinks">HOSPITAL FURNITURES</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">HOSPITAL BEDS</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <% for( let index = 0; index < categories.length; index++ ) { %>
+                    
+                    <a href="#<%= index %>" class="list-group-item list-group-item-action listItems" aria-current="true">
+                        <%=categories[index]%>
+                    </a>
+
+                <% } %>
+
+               </div>
+        </div>
+        <div class="col-md-9 row">
+          <% for( let index = 0; index < categories.length; index++ ) { %>
+          
+            <div id="<%= index %>">
+              <h3 style="margin-bottom: 20px;"><span class="sectionHeader"><%= categories[index] %></span></h3>
+            </div>
+            <% products.forEach(product => { %>
+            
+              <% if (product.subCategory2 === categories[index]) { %>
+
+                <div class="col-md-4">
+                
+                  <div class="card" style="width: 16rem;">
+                    
+                     <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1-<%= product._id %>">
+                    <img src="<%= product.imagePath %>" class="card-img-top" alt="...">
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal1-<%= product._id %>" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true" >
+                    <div class="modal-dialog modal-dialog1 modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header productDetailsHead">
+                          <h5 class="modal-title " id="exampleModalLabel1">Product Details</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row">
+                               <div class="col-md-6">
+                                <img src="<%= product.imagePath %>" style="width: 100%;">
+                               
+                               </div>
+                               <div class="col-md-6">
+                                      <h5 style="margin-bottom: 0%; color:red; text-decoration: line-through;">&#8377; <%= product.actualPrice %></h5>
+                                      <h2 style="font-weight: bold; font-size: 2rem;">&#8377; <%= product.discountPrice %></h2>
+                                      <div style="padding: 2% 0%;">
+                                        <% if (product.availability) { %>
+                                          <span style="font-size:small; color: green; background-color:rgb(193, 247, 193); border-radius: 10%; padding: 1%;"><i class="bi bi-check-circle"></i> in stock</span>
+                                        <% } else { %>
+                                          <span style="font-size:small; color: red; background-color:rgb(247, 193, 193); border-radius: 10%; padding: 1%;"><i class="bi bi-check-circle"></i> Out of Stock</span>
+                                        <% } %>
+                                        
+                                      </div>
+                                      <div style="padding: 2% 0%;">
+                                        <% if (product.availability) { %>
+                                          <a role="button" href="/add-to-cart/<%=product._id%>/respiratoryCare" class="btn" style="width: 75%; background-color:orangered; color: white;"><i class="bi bi-cart3"></i> Add to Cart</a>
+                                        <% } else { %>
+                                          <a role="button" href="/add-to-cart/<%=product._id%>/respiratoryCare" class="btn btn-secondary disabled" style="width: 75%;" ><i class="bi bi-cart3"></i> Add to Cart</a>
+                                        <% } %>
+                                      </div>
+                                      <div style="padding: 2% 0%;">
+                                        <a href="" class="text-muted" style="text-decoration: none;">Needed in bulk quantity?</a>
+                                    </div>
+                                    <div style="padding: 2% 0%;">
+                                      <a href=""><img src="/images/whatsapp.png" style="width: 50%;" alt=""></a>
+                                    </div>
+                                    <div class="brand">
+                                      <table class="table">
+                                        
+                                        <tbody>
+                                          <tr>
+                                            <td>Country of Origin</td>
+                                            <td><%= product.madeIn %></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Product Condition</td>
+                                            <td><%= product.condition %></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Estimated Delivery</td>
+                                            <td><%= product.estimatedDelivery %></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Installation</td>
+                                            <td><%= product.installation %></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Warranty</td>
+                                            <td><%= product.estimatedDelivery %></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Brand</td>
+                                            <td><%= product.brand %></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                               </div>
+                           </div>
+                            
+                         
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                      <div class="card-body">
+                        <h5 class="card-title"><%= product.title.substring(0,20) %></h5>
+                        <p class="card-text"><%= product.description.substring(0,50) %></p>
+                        <p class="card-text"> <span style="color:blue; text-decoration: line-through;">&#8377; <%= product.actualPrice %></span> - <span style="font-weight: bold; color: black; font-size: 1.5rem;">&#8377; <%= product.discountPrice %>/-</span></p> 
+                        <% if (product.availability) { %>
+                          <a href="/add-to-cart/<%=product._id%>/hospitalBeds" class="btn btn-primary btn-sm" style="display: inline-block;">Add to Cart</a>
+                        <% } else { %>
+                          <a href="/add-to-cart/<%=product._id%>" class="btn btn-primary btn-sm disabled" style="display: inline-block;">Add to Cart</a> 
+                        <% } %>
+                        
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= product._id %>">
+                                  <i class="bi bi-eye-fill"></i>
+                        </button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal-<%= product._id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"><%= product.title %></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <img src="<%= product.imagePath %> " alt="" style="width: 100%;">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                        </div>
+    
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1-<%= product._id %>">
+                          <i class="bi bi-info-lg"></i>
+                        </button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1-<%= product._id %>" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true" >
+                          <div class="modal-dialog modal-dialog1 modal-dialog-scrollable">
+                            <div class="modal-content">
+                              <div class="modal-header productDetailsHead">
+                                <h5 class="modal-title " id="exampleModalLabel1">Product Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                 <div class="row">
+                                     <div class="col-md-6">
+                                      <img src="<%= product.imagePath %>" style="width: 100%;">
+                                     
+                                     </div>
+                                     <div class="col-md-6">
+                                            <h5 style="margin-bottom: 0%; color:red; text-decoration: line-through;">&#8377; <%= product.actualPrice %></h5>
+                                            <h2 style="font-weight: bold; font-size: 2rem;">&#8377; <%= product.discountPrice %></h2>
+                                            <div style="padding: 2% 0%;">
+                                              <% if (product.availability) { %>
+                                                <span style="font-size:small; color: green; background-color:rgb(193, 247, 193); border-radius: 10%; padding: 1%;"><i class="bi bi-check-circle"></i> in stock</span>
+                                              <% } else { %>
+                                                <span style="font-size:small; color: red; background-color:rgb(247, 193, 193); border-radius: 10%; padding: 1%;"><i class="bi bi-check-circle"></i> Out of Stock</span>
+                                              <% } %>
+                                              
+                                            </div>
+                                            <div style="padding: 2% 0%;">
+                                              <% if (product.availability) { %>
+                                                <a role="button" href="/add-to-cart/<%=product._id%>/hospitalBeds" class="btn" style="width: 75%; background-color:orangered; color: white;"><i class="bi bi-cart3"></i> Add to Cart</a>
+                                              <% } else { %>
+                                                <a role="button" href="/add-to-cart/<%=product._id%>/hospitalBeds" class="btn btn-secondary disabled" style="width: 75%;" ><i class="bi bi-cart3"></i> Add to Cart</a>
+                                              <% } %>
+                                            </div>
+                                            <div style="padding: 2% 0%;">
+                                              <a href="" class="text-muted" style="text-decoration: none;">Needed in bulk quantity?</a>
+                                          </div>
+                                          <div style="padding: 2% 0%;">
+                                            <a href=""><img src="/images/whatsapp.png" style="width: 50%;" alt=""></a>
+                                          </div>
+                                          <div class="brand">
+                                            <table class="table">
+                                              
+                                              <tbody>
+                                                <tr>
+                                                  <td>Country of Origin</td>
+                                                  <td><%= product.madeIn %></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Product Condition</td>
+                                                  <td><%= product.condition %></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Estimated Delivery</td>
+                                                  <td><%= product.estimatedDelivery %></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Installation</td>
+                                                  <td><%= product.installation %></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Warranty</td>
+                                                  <td><%= product.estimatedDelivery %></td>
+                                                </tr>
+                                                <tr>
+                                                  <td>Brand</td>
+                                                  <td><%= product.brand %></td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                     </div>
+                                 </div>
+                                  
+                               
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                                
+                      </div>
+                  </div>
+                  
+                </div>
+  
+              <% } %>
+
+            <% }) %>
+
+          <% } %>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

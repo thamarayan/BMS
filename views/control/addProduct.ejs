@@ -1,0 +1,180 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cm-dashborad">
+    <div class="row" style="background-color: rgb(236, 236, 162);">
+        <div class="col-md-2 col-2">
+        </div>
+        <div class="col-md-8 col-8">
+            <div class="col-md-8 col-8 align-text-center" style="padding:2% 5% 5%;">
+                <h1 style="font-family: 'Poppins', sans-serif; color:#000D6B;">ADD NEW PRODUCT</h1>
+                <p class="text-muted">Add a new product to its respective category and sub-category.</p>
+                <form action="/control/newProduct" method="post" style="margin: 0 auto; float: none;"  enctype="multipart/form-data" onsubmit="return Validate(this)">
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="name" id="name" aria-describedby="nameHelp" placeholder="Product Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="description" id="description" aria-describedby="descriptionHelp" placeholder="Product Description">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control fc-checkout" name="aPrice" id="aPrice" aria-describedby="aPrice" placeholder="Actual Price">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control fc-checkout" name="dPrice" id="dPrice" aria-describedby="dPrice" placeholder="Discount Price">
+                    </div>
+                    <div class="mb-3">
+                        <!-- <input type="text" class="form-control fc-checkout" name="category" id="category" aria-describedby="category" placeholder="Main Category"> -->
+                        <select class="form-select fc-checkout" id="mainCategory" name="mainCategory" aria-label="Default select example">
+                            <option selected>Main Category</option>
+                            <option value="HC">HOME CARE</option>
+                            <option value="ICC">ICU / CRITICAL CARE</option>
+                            <option value="OE">OT EQUIPMENT</option>
+                            <option value="DI">DIAGNOSTIC & IMAGING</option>
+                            <option value="SA">SUPPLIES & ACCESSORIES</option>
+                            <option value="HF">HOSPITAL FURNITURES</option>
+                            <option value="CP">COVID PRODUCTS</option>
+                            <option value="HI">HOSPITAL INFRASTRUCTURES</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <!-- <input type="text" class="form-control fc-checkout" name="subCategory1" id="subCategory1" aria-describedby="subCategory1" placeholder="Sub Category"> -->
+                        <select class="form-select fc-checkout" id="subCategory1" name="subCategory1" aria-label="Default select example">
+                            <option selected>Sub Category</option>
+                            
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="subCategory2" id="subCategory2" aria-describedby="subCategory2" placeholder="subCategory2">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="madeIn" id="madeIn" aria-describedby="madeIn" placeholder="Made In">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="estDelivery" id="estDelivery" aria-describedby="estDelivery" placeholder="Estimated Delivery Time">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control fc-checkout" name="brand" id="brand" aria-describedby="brand" placeholder="Brand">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control fc-checkout" name="packingCharge" id="packingCharge" aria-describedby="packingCharge" placeholder="Packing Charge">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control fc-checkout" name="shippingCharge" id="shippingCharge" aria-describedby="shippingCharge" placeholder="Shipping Charge">
+                    </div>
+                    <div class="mb-3">
+                        <label for="productImg" class="form-label" style="margin-bottom: 0%;">Product Image</label>
+                        <input type="file" multiple style="margin-top: 0%;" class="form-control fc-registration" name="productImg" id="productImg" aria-describedby="productImg" required>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <button type="submit"  class="btn btn-primary btn-sm">Register</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2 col-2">
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+$('#mainCategory').on('change', function(){
+   console.log($('#mainCategory').val());
+    $('#subCategory1').html('');
+    if($('#mainCategory').val()=='HC'){
+        $('#subCategory1').append('<option value="RC">Respiratory Care</option>');
+        $('#subCategory1').append('<option value="MA">Mobile Aid</option>');
+        $('#subCategory1').append('<option value="PR">Physiotherapy & Rehabilitation</option>');
+        $('#subCategory1').append('<option value="HCE">Home Care Equipments</option>');
+        $('#subCategory1').append('<option value="HPC">Health & Personal Care</option>');
+        $('#subCategory1').append('<option value="SBS">Support Braces & Splints</option>');
+    }else if($('#mainCategory').val()=='ICC'){
+        $('#subCategory1').append('<option value="VM">Ventilator Machine</option>');
+        $('#subCategory1').append('<option value="IP">Infusion Pump</option>');
+        $('#subCategory1').append('<option value="DE">Dialysis Equipment</option>');
+        $('#subCategory1').append('<option value="CP">Compression Pump</option>');
+        $('#subCategory1').append('<option value="DAP">Defibrilator, AED, Pacemakers</option>');
+        $('#subCategory1').append('<option value="PMS">Patient Monitoring Systems</option>');
+    }else if($('#mainCategory').val()=='OE'){
+        $('#subCategory1').append('<option value="SM">Suction Machine</option>');
+        $('#subCategory1').append('<option value="SET">Surgery Equipments & Table</option>');
+        $('#subCategory1').append('<option value="SI">Surgical Instruments</option>');
+        $('#subCategory1').append('<option value="OOE">Other OT Equipments</option>');
+        $('#subCategory1').append('<option value="AE">Anesthesiology Equipments</option>');
+        $('#subCategory1').append('<option value="SE">Sterilization Equipments</option>');
+        $('#subCategory1').append('<option value="DE">Dermatology Equipments</option>');
+    }else if($('#mainCategory').val()=='DI'){
+        $('#subCategory1').append('<option value="LS">Littman Stethoscope</option>');
+        $('#subCategory1').append('<option value="EC">Electrocardiograph</option>');
+        $('#subCategory1').append('<option value="EE">Electrodiagnostic Equipment</option>');
+        $('#subCategory1').append('<option value="GD">General Diagnosis</option>');
+        $('#subCategory1').append('<option value="RI">Radiology Imaging</option>');
+        $('#subCategory1').append('<option value="POCT">POCT Devices</option>');
+    }else if($('#mainCategory').val()=='SA'){
+        $('#subCategory1').append('<option value="SWC">Surgical & Wound Care dressing</option>');
+        $('#subCategory1').append('<option value="MUL">Medical Clothing, Uniforms, Linen</option>');
+        $('#subCategory1').append('<option value="DC">Disposables & Consumables</option>');
+        $('#subCategory1').append('<option value="MEA">Medical Equipment Accessories</option>');
+        $('#subCategory1').append('<option value="SS">Surgical Supplies</option>');
+        $('#subCategory1').append('<option value="SIO">Syringes, Infusion Tubes & Other Intravenous Supplies</option>');
+        $('#subCategory1').append('<option value="MS">Medical Supplies</option>');
+        $('#subCategory1').append('<option value="BWP">Bio-Waste Products</option>');
+    }else if($('#mainCategory').val()=='HF'){
+        $('#subCategory1').append('<option value="STR">Stretcher</option>');
+        $('#subCategory1').append('<option value="HB">Hospital Beds</option>');
+        $('#subCategory1').append('<option value="HC">Hospital Chair</option>');
+        $('#subCategory1').append('<option value="HT">Hospital Trolley</option>');
+        $('#subCategory1').append('<option value="HS">Hospital Stands</option>');
+        $('#subCategory1').append('<option value="HTHS">Hospital Table/Hospital Stool</option>');
+    }else if($('#mainCategory').val()=='CP'){
+        $('#subCategory1').append('<option value="FaMa">Face Mask</option>');
+        $('#subCategory1').append('<option value="HSD">Hand Sanitizer & Disinfectant</option>');
+        $('#subCategory1').append('<option value="PPE">Personal Protective Equipment</option>');
+        $('#subCategory1').append('<option value="FuMa">Fumigation Machine</option>');
+        $('#subCategory1').append('<option value="INCT">Infrared Non Contact Thermometers</option>');
+        $('#subCategory1').append('<option value="DTK">Diagnostic Test Kit</option>');
+        $('#subCategory1').append('<option value="COVID">COVID-19 Medical Equipment</option>');
+        $('#subCategory1').append('<option value="MM">Medical Mask</option>');
+    }else if($('#mainCategory').val()=='HI'){
+        $('#subCategory1').append('<option value="MOT">Modular Operation Theaters</option>');
+        $('#subCategory1').append('<option value="MGPS">Medical Gas Pipeline system</option>');
+        $('#subCategory1').append('<option value="MCSS">Medical Ceiling Supply System</option>');
+        $('#subCategory1').append('<option value="CSSD">Central Sterile Services Department</option>');
+    }
+});
+
+var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
+function Validate(oForm) {
+    var arrInputs = oForm.getElementsByTagName("input");
+    for (var i = 0; i < arrInputs.length; i++) {
+        var oInput = arrInputs[i];
+        if (oInput.type == "file") {
+            var sFileName = oInput.value;
+            if (sFileName.length > 0) {
+                var blnValid = false;
+                for (var j = 0; j < _validFileExtensions.length; j++) {
+                    var sCurExtension = _validFileExtensions[j];
+                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                        blnValid = true;
+                        break;
+                    }
+                }
+                
+                if (!blnValid) {
+                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                    return false;
+                }
+            }
+        }
+    }
+  
+    return true;
+}
+
+</script>
+

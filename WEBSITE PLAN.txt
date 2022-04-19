@@ -1,0 +1,154 @@
+BIO MEDICAL SYSTEMS
+
+PAGES:
+
+INDEX/HOME
+
+PRODUCTS
+ BY CATEGORY
+ BY BODY PARTS
+ BY BRANDS 
+ INDIVIDUAL PRODUCT PAGE
+
+PAYMENT TERMS
+
+DELIVERY TERMS
+
+ABOUT BIO MEDICAL SYSTEMS
+
+CONTACT PAGE
+ PRODUCT ENQUIRY
+ FEEDBACK
+ GOOGLE MAP INTEGRATION
+
+FAQ PAGE
+
+SHOPPING CART
+
+CHECKOUT PAGE
+
+PAYMENT PAGE
+
+ORDER SUCCESS PAGE
+
+LOGIN/SIGNUP PAGE
+ USER COMPANY REGISTER PAGE
+ USER ORDER HISTORY
+ USER ORDER STATUS
+
+SITE DASHBOARD
+
+ ORDERS MANAGEMENT
+   PAYMENT UPDATION
+   DISPATCH UPDATION
+   CANCEL AN ORDER
+
+ PRODUCTS 
+   STATUS UPDATION
+   NEW ADDITION
+   DETAILS UPDATION
+   REMOVE A PRODUCT
+
+PRODUCT SCHEMA : (Needs to see if it changes as per products)
+
+NAME
+IMAGE
+CATEGORY
+BODY PART
+DESCRIPTION
+BRAND
+ORIGINAL PRICE
+DISCOUNT PRICE
+PACKING CHARGE
+TOTAL PRICE	
+AVAILABILITY
+IN DEMAND?
+EXPECTED DELIVERY TIME
+
+REGISTERED USER SCHEMA : 
+
+USER NAME
+COMPANY NAME
+CONTACT NUMBER
+COMPANY EMAIL
+GST DETAILS
+COMPANY ALIVE FROM ??
+
+LOG IN SCHEMA : 
+
+EMAIL ID
+PASSWORD
+
+ORDER SCHEMA : 
+
+ORDER DATE
+USER DETAILS
+CART ITEMS
+PACKING CHARGE
+SHIPPING CHARGE
+TOTAL ORDER VALUE
+PAYMENT TYPE
+PAYMENT STATUS
+DISPATCH STATUS
+
+
+About us:
+
+It all started in 1972, when Mr. G. Rajasundharam started his career as a Sidhdha Dotor in Sivakasi, Tamil Nadu. While doing so, he also started to supply medical raw materials and dried medicinal plants all over India. Then his son, Mr. Ganesan planned to take it to the next level. He got his M.Sc. Ph.D. from Madurai Kamaraj University in 2009. In his serious efforts and thoughts, Bio Medical Systems was founded in 2013, with high hopes and dreams filled in his heart, in Mumbai Maharashtra. Later, he expanded his business in Tirunelveli, Sivakasi, Madurai, Trichy, Chennai and Coimbatore. Our Company delivers all kind of medical equipments and related parts/accessories to a wide range of people including Doctors, Large scale suppliers, small scale dealers and also to the end users. The main motto of Bio Medical Systems is its uncompromising aproach in quality. We prioritize our customers more than anything and want to give them the best. Also, another important aspect we look into is timely delivery. We make sure to deliver the best product in the promised time.  
+
+since - 1972
+G Rajasundharam - Founder - Sivakasi - business started - Sidha Doctor
+Local Medical Raw Materials supply, dried medicinal plants - all over India - initial business
+
+Dr. Ganesan R 
+M.Sc. Ph.D - Madurai Kamaraj University - 2009
+2004-05 - Tropical Botanical Garden & Research Institute - Jr. Research Fellowship
+2005-09 - Madurai Kamaraj University - Jr. Research Fellowship
+2009-10 - NISCAIR - Young Scientist Internship - selected
+
+Bio Medical Systems - 2013 founded - Mumbai, Maharashtra.
+2021 Aug - New Registration in Tirunelveli. Sivakasi, Madurai, Trichy, Chennai, Coimbatore.
+
+
+GMAIL :
+bmsnarang@gmail.com
+BmsNarang1.
+
+Cloud PW:
+Orange4life
+
+06/01/22
+
+Show products by budget-wise.
+order has to be approved by admin.
+
+Payment Option : 
+EMI Direct
+
+EMI -
+
+Two Types : 
+Below 10000 - aadhar pan, bank statement for past 1 month details + 50% payment
+Above 10000 - GST, Shopping License
+
+
+
+product description, paymentpolicy, delivery time, brand details 
+brand name and details should be included in every product.
+copyright ownership details
+
+
+PRODUCT - delete option needed
+
+PDF creation 
+https://stackoverflow.com/questions/32941366/how-to-export-json-data-to-pdf-file-with-specify-format-with-nodejs
+
+razorpay test key id
+rzp_test_y1rdVYN0dPbqem
+
+razorpay test key secret
+qsOVHFclGXu0u2uisk0HPkI4
+
+
+
+

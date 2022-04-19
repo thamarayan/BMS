@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMedical</title>
+
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' type="text/css" />
+    <link rel='stylesheet' href='/stylesheets/signin.css' type="text/css" />
+    
+    <!-- Bootstrap Inclusion -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+      <!-- Owl Carousel -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lily+Script+One&family=Oleo+Script&family=Playfair+Display:wght@500&family=Poppins:ital,wght@0,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid cf-navBar">
+      <a class="navbar-brand" href="/"><img src="/images/logo.png" class="logoImg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" href="/category/homeCare">HOME CARE</a></li>
+              <li><a class="dropdown-item" href="/category/IcuCriticalCare">ICU / CRITICAL CARE</a></li>
+              <li><a class="dropdown-item" href="/category/OTEquipments">OT EQUIPMENT</a></li>
+              <li><a class="dropdown-item" href="/category/diagnosticImaging">DIAGNOSTIC & IMAGING</a></li>
+              <li><a class="dropdown-item" href="/category/suppliesAccessories">SUPPLIES & ACCESSORIES</a></li>
+              <li><a class="dropdown-item" href="/category/hospitalFurnitures">HOSPITAL FURNITURE</a></li>
+              <li><a class="dropdown-item" href="/category/covid19">COVID PRODUCTS</a></li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutUs">About Us</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <% if (login) { %>
+              <i class="bi bi-person-fill"></i> <%= userName %>
+              <% } else { %>
+                <i class="bi bi-person-fill"></i> User
+             <% } %>
+            </a>
+            <% if (login) { %>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/users/profile">Profile</a></li>
+                <li><a class="dropdown-item" href="/users/logout">Logout</a></li>
+              </ul>
+            <% } else { %>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/users/signin">Sign In</a></li>
+                <li><a class="dropdown-item" href="/users/signup">New User? Sign Up</a></li>
+              </ul>
+            <% } %>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/shoppingCart"><i class="bi bi-bag-fill"></i> Cart </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+    <i class="bi bi-whatsapp my-float"></i>
+    </a>
+  <button onclick="topFunction()" id="myBtn" class="btn btn-sm" title="Go to top"><i class="bi bi-arrow-up-circle-fill"></i></button>
+ 

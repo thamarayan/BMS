@@ -1,0 +1,66 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-homecare">
+    <div class="row">
+        <div class="col-md-3">
+            <h3 style="font-weight: bold; color: blue;">HOME CARE</h3>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="bi bi-house-fill" style="color: black;"></i></a></li>
+                  <li class="breadcrumb-item"><a href="/products" style="text-decoration: none; color: black;">Products</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">HOME CARE</li>
+                </ol>
+            </nav>
+            <div class="list-group">
+                <a href="/category/respiratoryCare" class="list-group-item list-group-item-action listItems" aria-current="true">
+                  Respiratory Care
+                </a>
+                <a href="/category/healthPersonalCare" class="list-group-item list-group-item-action listItems">Health & Personal Care</a>
+                <a href="/category/mobileAid" class="list-group-item list-group-item-action listItems">Mobile Aid</a>
+                <a href="/category/supportBracesSplints" class="list-group-item list-group-item-action listItems">Support Braces & Splints</a>
+                <a href="/category/physiotherapyRehabilitation" class="list-group-item list-group-item-action listItems">Physiotherapy & Rehabilitation</a>
+                <a href="/category/homeCareEquipments" class="list-group-item list-group-item-action listItems">Home Care Equipments</a>
+            </div>
+        </div>
+        <div class="col-md-9 row">
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/respiratoryCare"><img src="/images/miniCategories/respiratoryCare.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Respiratory Care</p>
+          </div>
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/healthPersonalCare"><img src="/images/miniCategories/healthCare.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Health & Personal Care</p>
+          </div>
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/mobileAid"><img src="/images/miniCategories/mobileAid.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Mobile Aid</p>
+          </div>
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/supportBracesSplints"><img src="/images/miniCategories/supportBraces.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Support Braces & Splints</p>
+          </div>
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/physiotherapyRehabilitation"><img src="/images/miniCategories/rehabilitationBelt.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Physiotherapy & Rehabilitation</p>
+          </div>
+          <div class="col-md-3 miniCateg">
+            <figure>
+              <a href="/category/homeCareEquipments"><img src="/images/miniCategories/homeCareEquipments.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+            </figure>
+            <p class="product-tag">Home Care Equipments</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

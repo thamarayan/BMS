@@ -1,0 +1,127 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid cf-checkout">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="/images/banners/banner1.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-8" style="background-color: #D3DEDC;">
+            <h2 style="padding-top: 3%; font-family: 'Poppins', sans-serif; font-weight: bold;">CHECKOUT</h2>
+            <h5>Order Value : <span style="color: red; font-weight: bolder;">&#8377; <%= session.cart.totalPrice %></span></h5>
+            <form  id="checkoutForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="name" id="name" aria-describedby="emailHelp" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="cname" id="cname" aria-describedby="emailHelp" placeholder="Company Name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="daddress" id="daddress" aria-describedby="emailHelp" placeholder="Delivery Address">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control fc-checkout" name="contact" id="contact" aria-describedby="emailHelp" placeholder="Contact">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control fc-checkout" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <input type="hidden" name="paymentType" id="paymentType" value="NOEMI">
+                <div class="mb-3">
+                    
+                    <% if (cmpnyStatus === 'nil') { %>
+                        <button id="rzp-button1" type="submit" class="btn btn-primary btn-sm">Pay  &#8377; <%= session.cart.totalPrice %> </button>
+                        <p style="padding-top: 0.25rem;"><a href="/registration" style="text-decoration: none; color: blue;">Register</a> your company to avail EMI Facilities</p>
+                    <% } else if (!cmpnyStatus) { %>
+                        <button id="rzp-button1" type="submit" class="btn btn-primary btn-sm">Pay  &#8377; <%= session.cart.totalPrice %> </button>
+                        <button class="btn btn-sm btn-danger disabled">Prefer EMI & Pay  &#8377; <%= emiAmount %>*</button> <p class="text-muted">* Company Registration not yet approved to avail EMI Facilities. Contact XXXXXXXXX</p>
+                    <% } else if (cmpnyStatus) { %>
+                        <button id="rzp-button1" type="submit" class="btn btn-primary btn-sm">Pay  &#8377; <%= session.cart.totalPrice %> </button><span style="font-size: 0.75rem;"> OR </span> 
+                        <a role="button" type="submit" href="/checkoutEMI" class="btn btn-warning btn-sm">Prefer EMI & Pay  &#8377; <%= emiAmount %> </a>
+                    <% } %>
+                    
+                </div>
+                <div class="mb-3">
+                    <a href="/shoppingCart" style="text-decoration: none; color: gray; font-weight: bold;">Back to Shopping Cart</a>
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-md-2">
+            <img src="/images/banners/banner1.jpg" alt="" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+ 
+    
+    document.getElementById('rzp-button1').onclick = function(e){
+        
+        //collect the form data using Id Selector what ever data you need to send to server
+        let name=$('#name').val();
+        let cname= $('#cname').val();
+        let daddress = $('#daddress').val();
+        let contact = $('#contact').val();
+        let email = $('#email').val();
+        let paymentType = $('#paymentType').val();
+
+        var options = {
+            "key": "<%= keyValue %>", // Enter the Key ID generated from the Dashboard
+            "amount": "<%= fees %>", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Bio Medical Systems",
+            "description": "New Order",
+            "image": "/images/logo.png",
+            "order_id": "<%= orderId %>", //This is a sample Order ID. Pass the `id` obtained in the previous step
+            
+            
+            "handler": function (response){
+
+                    redirect_url = '/users/profile';
+                    location.href = redirect_url;
+                    
+                var settings = {
+                    "url": "/api/payment/verify",
+                    "method": "POST",
+                    "timeout": 0,
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                "data": JSON.stringify({response, 'email':email, 'name':name, 'cname':cname, 'daddress': daddress, 'contact':contact, 'email': email, 'paymentType':paymentType }),
+        }
+       
+    $.ajax(settings).done(function(response){
+        alert('Payment Successful. Expect the order soon!!');
+       
+    })
+    
+
+    },
+        
+    "theme": {
+        "color": "#000000"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+
+    rzp1.open();
+    e.preventDefault();
+  
+}
+
+ </script>
+

@@ -1,0 +1,308 @@
+<%- include('./partials/header.ejs') %>
+
+<section id="products-1">
+    <div class="container-fluid cf-products">
+        <div class="row">
+            <div class="col-md-12 prod-head">
+                <h1 class="prod-h1">PRODUCTS</h1>
+            </div>
+            <div class="col-md-12 prod-head-div">
+                <h2 class="prod-title">OUR PRODUCTS</h2>
+                <p class="title-desc">Bio Medical Systems is a suppliers of a wide range of high quality medical, surgical and hospital products. Our products are ISO 9001 and CE certified. We supply our products throughout India. Here is our product list:</p>
+                <hr class="bottomLine1">
+            </div>
+            <div class="col-md-12 prod-head-div">
+                <p class="text-muted">To Visit Products Main Categories</p>
+                <a href="/category/hmf" class="prodLinks">Hospital Medical Furnitre</a> | 
+                <a href="/category/oii" class="prodLinks">Orthopaedic Implants & Instruments</a> | 
+                <a href="/category/md" class="prodLinks">Medical Disposables</a> <br>
+                <a href="/category/dep" class="prodLinks">Diagnostic Equipments & Products</a> |
+                <a href="/category/aep" class="prodLinks">Anaesthesia Equipments & Products</a> |
+                <a href="/category/as" class="prodLinks">Autoclave & Sterilizers</a> |
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hospital Medical Furniture -->
+<section id="product1">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Hospital Medical Furniture</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/1-hospital-medical-furniture.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="/category/hmf#collapseOne" class="categLinks">Hospital Beds - ICU</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hospital Beds - Semi Fowler</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hospital Beds - Orthopaedic</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hospital Beds - Mattress</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Bedside Screens</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">IV Pole Saline Stands</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Obstetric Tables</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Trolley</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Dirty Linen / Waste Trolley</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Anesthesia Cart / Trolley</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Bedside Revolving Stools</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Bowl Stands</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Medical Cabinets Cupboards</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Dust Bin - Foot Operated</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Waiting Chairs & Benches</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Office Conference, Coffee Tables</a></li>
+                      </ul>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Hospital Beds - Fowler</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hospital Beds - Plain</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Baby Crib</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Bedside Lockers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Overbed Tables</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Examination Table</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Foot Stools</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Stretchers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Blood Donor Chairs</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Doctor Chair & Stools</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Scrub Unit Racks</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Movable Cabinets Drawers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Stretcher Trolley</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Home Care Beds</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Ambulance Stretcher</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Orthopaedic Implants & Instruments -  -->
+<section id="product2">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Orthopaedic Implants & Instruments</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/2-orthopedic-implants.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Interlocking Nails</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Nails, Wires and Pins</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Mini Fragment Implants</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Small Fragment - Standard</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Small Fragment - Locking</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Large Fragment - Standard</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Large Fragment - Locking</a></li>
+                      </ul>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Cannulated Screws</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">DHS/DCS & Angled Blade</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hip Prosthesis</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">External Fixators</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">General Instruments</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Power Tools</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Medical Disposables -  -->
+<section id="product3">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Medical Disposables</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/3-medical-disposables.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="background-color: red; color: white;">Apple Series <i class="bi bi-arrow-down-circle-fill"></i></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Cardiology Disposable Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Infusion Disposable Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Medical Gloves</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Plastic Scissors</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Plastic Mouth Piece for Endoscopes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Urology Disposables Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Anaesthesia Disposable Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">General Surgery</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Gynaecology and Paediatric Disposable Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Blades & Scalpels</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Blood Collection Tubes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Plastic Vaginal Speculum</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Waste Management</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Plastic Sponge Holder</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Plastic Tweezers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Gastro Entrology Disposable Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Dressings</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Laryngeal Mask</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">ECG Electrodes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Maternity Pads</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Blood Bag Systems</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">General Disposables</a></li>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="background-color: orange; color: white;">Orange Series <i class="bi bi-arrow-down-circle-fill"></i></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Medical Dressings</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Protective Apparels</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Drape Sets</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Minor Procedure Sets</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Gloves</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Infusion Sets</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Blood Management System</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hypodermic Needles And Syringes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Sterilization Pouches / Rolls</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Airway Management Devices</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Spinal Anesthesia Needles</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Gastroenterology Disposables</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Urology Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Colostomy Bags & Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Surgical Blades</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Gynecology Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Disposable Dental Products</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Miscellaneous Disposable Products</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Diagnostic Equipments & Products -  -->
+<section id="product4">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Diagnostic Equipments & Products</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/4-diagnostic_equipments.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Sphygmomanometers & Spares</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Opthalmoscopes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Pulse Oximeters</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Fetal Doppler</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">ECG Machine</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Measuring Tapes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Magnifiers - Loupes & Optics</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Stethoscopes & Spare Parts</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Diagnostic Sets</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">ECG Electrodes/ Ultrasound Gel</a></li>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Miscellaneous</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Nebulizers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Reflex Hammers, Tuning Forks</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Thermometers Clinical</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">EEG Series</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Digital Blood Pressure Monitor</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">X Ray Accessories</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Otoscopes</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Eye Test Equipment (Opthalmic Range)</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Anaesthesia Equipments & Products -  -->
+<section id="product5">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Anaesthesia Equipments & Products</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/5-anaesthesia-equipments.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Silicone Autoclavable Ambu Type Bags</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Face Masks</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Reservoir Bag PVC</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Rebreathing Bags</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Black Rubber Ambu Type Bags</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Corrugated Tube</a></li>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Guedel Pattern Airway</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Head Harness</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Magill Forceps</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Oxygen Cylinder</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Anesthesia Machine</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Autoclave & Sterilizers -  -->
+<section id="product6">
+    <div class="container-fluid cf-pro">
+        <div class="row">
+            <div class="col-12 col-lg-12 categ-title">
+                <h3>Autoclave & Sterilizers</h3>
+            </div>
+            <div class="col-12 col-lg-4">
+                <figure>
+                    <a href=""><img src="/images/category/6-autoclave-sterilizers.jpg" class="img-fluid" alt="BioMedical Equipments"></a>
+                </figure>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="col-md-6" style="float: left;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Autoclaves Pressure Steam Sterilizers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Double Wall Autoclave</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Front Loading Flash Sterilizers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Gas cum Electric Autoclaves</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Steam Indicator Strips</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Instrument Sterilizers - S.S.</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Portable Semi Automatic/a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Horizontal Sterilizer</a></li>
+                </div>
+                <div class="col-md-6" style="float: right;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="" class="categLinks">Fully Automatic Autoclave</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Dressing Drums - Stainless Steel</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hot Air Sterilizers</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Hot Plates</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Laboratory Semi Automatic</a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Portable Semi Automatic/a></li>
+                        <li class="list-group-item"><a href="" class="categLinks">Sterilization Pouch</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

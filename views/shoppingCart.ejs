@@ -1,0 +1,61 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid cf-shoppingCart">
+    <div class="row">
+      <div class="col-md-2">
+        <img src="/images/banners/banner1.jpg" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-8 col-8">
+        <% if (products) { %>
+            <% if (session.cart.totalQty > 0) { %>
+              <h2 style="color: blue; font-weight: bold;">SHOPPING CART</h2>
+              <hr style="width: auto; height: 2px; color: green; opacity: 1; margin: 0.25rem 0.25rem 0.5rem;">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <% products.forEach(product => { %>
+                      <tr>
+                        <td><%= product.item.title %></td>
+                        <td><%= product.item.mainCategory %></td>
+                        <td>&#8377; <%= product.item.discountPrice %></td>
+                        <td> 
+                          <a href="/reduce/<%= product.item._id%>" role="button" class="btn btn-danger btn-sm">-</a> 
+                          <%= product.qty %>
+                          <a href="/addOne/<%= product.item._id%>" role="button" class="btn btn-success btn-sm">+</a>
+                        </td>
+                        <td>&#8377; <%= product.price %></td>
+                        
+                      </tr>
+                      <% }) %>
+                  </tbody>
+              </table>
+              <h5>Total Amount : &#8377; <%= totalPrice %></h5>
+              <a role="button" href="/checkout" class="btn btn-primary btn-sm">Checkout</a>
+            <% } else { %>
+              <div style="height: 70vh; padding-top: 5%;">
+                <h2>SHOPPING CART</h2>
+                No Products added Yet. <a href="/products" style="font-weight: bold; color: blue; text-decoration: none;">Continue Shopping!</a>
+              </div>
+            <% } %>
+        <% } else { %>
+          <div style="height: 70vh; padding-top: 5%;">
+            <h2>SHOPPING CART</h2>
+            No Products added Yet. <a href="/products" style="font-weight: bold; color: blue; text-decoration: none;">Continue Shopping!</a>
+          </div>
+        <% } %>   
+      </div>
+      <div class="col-md-2">
+        <img src="/images/banners/banner1.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

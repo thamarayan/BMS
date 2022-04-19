@@ -1,0 +1,136 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-emiOrdersDashboard">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <h1 style="font-family: 'Poppins', sans-serif; font-weight: bold; text-align: center;"><span style="color: blue;">EMI PAYMENT PENDING ORDERS</span></h1>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="bi bi-house-fill" style="color: black;"></i></a></li>
+                  <li class="breadcrumb-item" aria-current="page"><a href="/control/dashboard" class="pageLinks">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Pending EMI Orders</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-12 col-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Cart</th>
+                    <th scope="col">Total Bill</th>
+                    <th scope="col">Received</th>
+                    <th scope="col">Balance</th>
+                    <th scope="col">Dispatched?</th>
+                    <th scope="col">Update Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% if (orders) { %>
+                     <% orders.forEach(order => { %>
+                        <tr>
+                            <td><%= order.orderDate.toISOString().slice(0,10) %></td>
+                            <td><%= order.name %></td>
+                            <td><%= order.contact %></td>
+                            <td><%= order.email %></td>
+                            <td>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= order._id %>">
+                                  Cart
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop-<%= order._id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Title</th>
+                                                    <th scope="col">Price</th>
+                                                    <th scope="col">Category</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Price</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <% order.cart.items.forEach(item => { %>
+                                                <tr>
+                                                    <td><%= item.item.title %></td>
+                                                    <td><%= item.item.discountPrice %></td>
+                                                    <td><%= item.item.subCategory %></td>
+                                                    <td><%= item.qty %></td>
+                                                    <td><%= item.price %></td>
+                                                </tr>
+                                                <% }) %>
+                                                </tbody>
+                                            </table>
+                                            Total Items : <%= order.cart.totalQty %> <br>
+                                            Total Price : &#8377;<%= order.cart.totalPrice %>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>    
+                            </td>
+                            <td>&#8377;<%= order.cart.totalPrice %></td>
+                            <td>&#8377;<%= order.amtReceived %></td>
+                            <td>&#8377;<%= order.amtPending %></td>
+                            <td>
+                                <% if (order.dispatchStatus) { %>
+                                    Yes
+                                <% } else { %>
+                                 Yet to Dispatch
+                                <% } %>
+                            </td>
+                            <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop1-<%= order._id %>">
+                                Update Payment
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="staticBackdrop1-<%= order._id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                      <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <form action="/control/updatePayment/<%=order._id%>" method="post">
+                                              <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+                                            <!-- <input type="hidden" name="orderId" value="<%= order._id %> "> -->
+                                            <input type="number" name="amount" placeholder="Amount Received">
+                                            <button class="btn btn-primary" type="submit">Update</button>
+                                          </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                                  </div>
+                              </div>
+                            </td>
+                            
+                        </tr>
+                     <% }) %>
+                    <% } %>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

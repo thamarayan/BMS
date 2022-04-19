@@ -1,0 +1,127 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-dashboard">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <h1 style="font-family: 'Poppins', sans-serif; font-weight: bold; color: blue;">PRODUCTS</h1>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="bi bi-house-fill" style="color: black;"></i></a></li>
+                  <li class="breadcrumb-item" aria-current="page"><a href="/control/dashboard" class="pageLinks">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Products</li>
+                </ol>
+            </nav>
+
+        </div>
+ 
+        <div class="col-md-12 row" style="text-align: center;">
+            <div class="col-md-3 productBtn"><a href="/control/prod/homeCare" type="button" class="btn btn-primary btn-sm">Home Care</a></div>
+            <div class="col-md-3 productBtn"><a href="/control/prod/icuCare" type="button" class="btn btn-primary btn-sm">ICU Care</a></div>
+            <div class="col-md-3 productBtn"><a href="/control/prod/otEquipments" type="button" class="btn btn-primary btn-sm">OT Equipments</a></div>
+            <div class="col-md-3 productBtn"><a href="/control/prod/diagImaging" type="button" class="btn btn-primary btn-sm">Diagnostic Imaging</a></div>
+            <div class="col-md-4 productBtn"><a href="/control/prod/sa" type="button" class="btn btn-primary btn-sm">Supplies Accessories</a></div>
+            <div class="col-md-4 productBtn"><a href="/control/prod/hf" type="button" class="btn btn-primary btn-sm">Hospital Furnitures</a></div>
+            <div class="col-md-4 productBtn"><a href="/control/prod/cp" type="button" class="btn btn-primary btn-sm">Covid Products</a></div>   
+        </div>
+
+        <% if (products.length > 0) { %>
+           <h2 class="ctrlProdHead"><%= title %></h2>
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">SubCategory1</th>
+                    <th scope="col">SubCategory2</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Availability</th>
+                    <th scope="col">In Demand</th>
+                    <th scope="col">New Arrival</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                    
+                        <% products.forEach(product => { %>
+                        <tr>
+                            <td><%= product.title %></td>
+                            <td><%= product.mainCategory %></td>
+                            <td><%= product.subCategory1 %></td>
+                            <td><%= product.subCategory2 %></td>
+                            <td><!-- Button trigger modal -->
+                                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-<%=product._id%>-<%= csrfToken %>">
+                                  Update
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-<%=product._id%>-<%= csrfToken %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                     
+                                      <div class="modal-body">
+                                        <form action="/control/updateProduct/<%= product._id %>" method="post">
+                                          <label for="name" class="form-label">Name</label>
+                                          <input type="text" class="form-control" id="name" name="name" value="<%= product.title%>">
+                                          <label for="description" class="form-label">Description</label>
+                                          <input type="text" class="form-control" id="description" name="description" value="<%= product.description%>">
+                                          <label for="actualPrice" class="form-label">Actual Price</label>
+                                          <input type="text" class="form-control" id="actualPrice" name="actualPrice" value="<%= product.actualPrice%>">
+                                          <label for="discountPrice" class="form-label">Discount Price</label>
+                                          <input type="text" class="form-control" id="discountPrice" name="discountPrice" value="<%= product.discountPrice%>">
+                                          <label for="madeIn" class="form-label">Made In</label>
+                                          <input type="text" class="form-control" id="madeIn" name="madeIn" value="<%= product.madeIn%>">
+                                          <label for="estimatedDelivery" class="form-label">Estimated Delivery</label>
+                                          <input type="text" class="form-control" id="estimatedDelivery" name="estimatedDelivery" value="<%= product.estimatedDelivery%>">
+                                          <label for="warranty" class="form-label">Warranty</label>
+                                          <input type="text" class="form-control" id="warranty" name="warranty" value="<%= product.warranty%>">
+                                          <label for="brand" class="form-label">Brand</label>
+                                          <input type="text" class="form-control" id="brand" name="brand" value="<%= product.brand%>">
+                                          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                          <button type="submit" class="btn btn-primary">Update</button>
+                                        </form>
+                                       
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div></td>
+                            <td>
+                              <% if (product.availability) { %>
+                                <a href="/control/makeUnavailable/<%= product._id %>" role="button" class="btn btn-primary btn-sm">Make unavailable</a>
+                                <% } else { %>
+                                  <a href="/control/makeAvailable/<%= product._id %>" role="button" class="btn btn-warning btn-sm">Make Available</a>
+                              <% } %>
+                            </td>
+                            <td>
+                              <% if (product.inDemand) { %>
+                                <a href="/control/markNoDemand/<%= product._id %>" role="button" class="btn btn-primary btn-sm">Not in Demand</a>
+                                <% } else { %>
+                                  <a href="/control/markInDemand/<%= product._id %>" role="button" class="btn btn-danger btn-sm">in Demand?</a>
+                              <% } %>
+                            </td>
+                            <td>
+                              <% if (product.newArrival) { %>
+                              <a href="/control/noNewArrival/<%= product._id %>" role="button" class="btn btn-secondary btn-sm">Mark normal</a>
+                              <% } else { %>
+                                <a href="/control/newArrival/<%= product._id %>" role="button" class="btn btn-primary btn-sm">New Arrival?</a>
+                              <% } %>
+                            </td>
+                        </tr>
+                        <% }) %>
+
+                   
+                </tbody>
+              </table>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,62 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container-fluid cf-registration">
+    <div class="row">
+        <div class="col-md-2 col-2">
+            <img src="/images/banners/banner1.jpg" alt="bmsBanner" class="img-fluid">
+        </div>
+        <div class="col-md-8 col-8 align-text-center" style="padding:2% 5% 5%;">
+            <h1 style="font-family: 'Poppins', sans-serif; color:#000D6B;">COMPANY REGISTRATION</h1>
+            <p class="text-muted">Register your company and get approved to avail easy EMI facilities.</p>
+            <form action="/registration" method="post" style="margin: 0 auto; float: none;"  enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="name" id="name" aria-describedby="nameHelp" placeholder="Your Name please">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="cname" id="cname" aria-describedby="companyNameHelp" placeholder="Company Name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="caddress" id="caddress" aria-describedby="cmpnyAddress" placeholder="Company Address">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control fc-checkout" name="contact" id="contact" aria-describedby="contactHelp" placeholder="Contact">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control fc-checkout" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control fc-checkout" name="estYear" id="estYear" aria-describedby="estYear" placeholder="Established year...">
+                </div>
+                <div class="mb-3">
+                    <label for="gstFile" class="form-label" style="margin-bottom: 0%;">GST Document <span style="color: red;">*</span></label>
+                    <input type="file" multiple style="margin-top: 0%;" class="form-control fc-registration" name="gstFile" id="gstFile" aria-describedby="gstFile" required>
+                </div>
+                <div class="mb-3">
+                    <label for="panFile" class="form-label" style="margin-bottom: 0%;">Company PAN <span style="color: red;">*</span></label>
+                    <input type="file" multiple style="margin-top: 0%;" class="form-control fc-registration" name="panFile" id="panFile" aria-describedby="panFile" required>
+                </div>
+                <div class="mb-3">
+                    <label for="shopLicense" class="form-label" style="margin-bottom: 0%;">Shop License</label>
+                    <input type="file" multiple style="margin-top: 0%;" class="form-control fc-registration" name="shopLicense" id="shopLicense" aria-describedby="shopLicense">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" value="upload" class="btn btn-primary btn-sm">Register</button>
+                </div>
+               
+                <input type="hidden" name="folder" value="<%= userName %>">
+            </form>
+        </div>
+        <div class="col-md-2 col-2">
+            <img src="/images/banners/banner1.jpg" alt="bmsBanner" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+<form action="/register" method="post" enctype="multipart/form-data">
+    <input type="file" name="document1" multiple>
+    <input type="file" name="document2" multiple>
+   
+    <button type="submit" value="Upload">Submit</button>
+</form> -->

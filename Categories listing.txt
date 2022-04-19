@@ -1,0 +1,78 @@
+HOME CARE HC
+
+RESPIRATORY CARE RC
+MOBILE AID MA
+PHYSIOTHERAPY AND REHABILITAITON PR
+HOME CARE EQUIPMENTS HCE
+HEALTH & PERSONAL CARE HPC
+SUPPORT BRACES & SPLINTS SBS
+
+ICU/CRITICAL CARE ICC
+
+VENTILATTOR MACHINE VM
+INFUSION PUMP IP
+DIALYSIS EQUIPMENT DE
+COMPRESSION PUMP CP
+DEFIBRILATOR, AED, PACEMAKERS DAP
+PATIENT MONITORING SYSTEMS PMS
+Arterial Blood Gas Analyzer 
+ELECTRO MEDICAL EQUIPMENT
+
+OT EQUIPMENTS OE
+
+SUCTION MACHINE SM
+SURGERY EQUIPMENTS & TABLE SET
+SURGICAL INSTRUMENTS SI
+OTHER OT EQUIPMENTS OOE
+ANESTHESIOLOGY EQUIPMENT AE
+STERILIZATION EQUIPMENT SE
+DERMATOLOGY EQUIPMENT DE
+
+DIAGNOSTIC IMAGING DI
+
+Littman Stethoscope LS
+Electrocardiograph EC
+Electrodiagnostic Equipment EE
+General Diagnosis GD
+Radiology Imaging RI
+POCT Devices POCT
+
+SUPPLIES & ACCESSORIES SA
+
+Surgical & Wound Care dressing SWC
+Medical Clothing, Uniforms, Linen MUL
+Disposables & Consumables DC
+Medical Equipment Accessories MEA
+Surgical Supplies SS
+Syringes, Infusion Tubes & Other Intravenous Supplies SIO
+Medical Supplies MS
+Bio-Waste Products BWP
+
+HOSPITAL FURNITURES HF
+
+Stretcher STR
+Hospital Beds HB
+Hospital Chair HC
+Hospital Trolley HT
+Hospital Stands HS
+Hospital Table/Hospital Stool HTHS
+Other Medical Furnitures OMF
+
+COVID PRODUCTS CP
+
+Face Mask FaMa
+Hand Sanitizer & Disinfectant HSD
+Personal Protective Equipment PPE
+Fumigation Machine FuMa
+Infrared Non Contact Thermometers INCT
+Diagnostic Test Kit DTK
+COVID-19 Medical Equipment COVID
+Medical Mask MM
+
+HOSPITAL INFRASTRUCTURES HI
+
+Modular Operation Theaters MOT
+Medical Gas Pipeline system MGPS
+Medical Ceiling Supply System MCSS
+Central Sterile Services Department CSSD
+

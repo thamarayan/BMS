@@ -1,0 +1,78 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-profile">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <h2>Welcome <span style="color: blue; font-family: 'Oswald', sans-serif ;"><%= user.name %></span></h2>
+              <h2 style="text-align: center; font-family: 'Oswald', sans-serif; color:blue">ORDERS HISTORY</h2>
+                <% if (orders.length>0) { %>
+                <% orders.forEach(order => { %>
+
+                <ul class="list-group" style="border: 1px solid #ccc; padding:2%; margin-bottom:2%">
+                    <strong>Order Id:</strong> <%= order._id %>
+                    <strong>Order Date:</strong> <%= order.orderDate.toISOString().substring(0, 10) %>
+                    <strong>Delivery Address:</strong> <%= order.deliveryAddress %> 
+                   <strong>Products</strong>
+                  <table class="table" style="border: 2px solid #ccc; border-radius: 5px; margin-top: 1%;"> 
+                    <thead>
+                      <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% order.items.forEach(item => { %> 
+                      <tr>
+                        <td><%= item.item.title %></td>
+                        <td>&#8377; <%=item.item.discountPrice%></td>
+                        <td><%=item.qty%> Units</td>
+                        <td>&#8377; <%=item.price%></td>
+                      </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                  <strong>Order Value : &#8377; <%= order.cart.totalPrice %></strong><br>
+                  <div class="row">
+                      <div class="col-md-3">
+                        <strong>Payment Status: </strong>
+                        
+                        <%= order.paymentStatus %>
+                      </div>
+                      <div class="col-md-3">
+                       <% if (order.paymentType === 'EMI') { %>
+                        Amount Received : <%= order.amtReceived%> <br> Balance : <%= order.amtPending %>
+                      <% } else { %>
+                       Paid in Full
+                       <% } %> 
+                      </div>
+                      <div class="col-md-3">
+                        <strong>Dispatch Status: </strong>
+                        <% if (order.dispatchStatus) { %>
+                            Dispatched
+                            <% } else { %>
+                            Yet to dispatch
+                        <% } %>                          
+                    </div>
+                    <div class="col-md-3">
+                          <a href="/users/printOrder/<%= order._id %>" role="button" class="btn btn-sm btn-primary">Print the Order</a>
+                    </div>
+                  </div>
+                  <br><br>
+                </ul>
+                  
+
+                  <% }) %>
+            <% } else { %>
+            <div style="height: 60vh;">
+              <h5>No Orders Yet... Explore our products <a href="/products" style="text-decoration: none; font-weight: bold; color:blue">here</a></h5>
+            </div>
+            
+            <% } %>
+           
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

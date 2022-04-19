@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-dashboard">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <h1 style="font-family: 'Poppins', sans-serif; font-weight: bold; text-align: center;"><span style="color: blue;">DASHBOARD</span></h1>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><i class="bi bi-house-fill" style="color: black;"></i></a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-12 col-12" style="padding: 2% 0%; text-align: center;">
+            <a href="/control/companies" role="button" class="btn btn-primary btn-sm">Companies</a>
+            <a href="/control/products" role="button" class="btn btn-warning btn-sm">Products</a>
+            <a href="/control/addProduct" role="button" class="btn btn-info btn-sm">New Product</a>
+            <a role="button" class="btn btn-success btn-sm  dropdown-toggle"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Orders</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/control/orders">All Orders</a></li>
+                <li><a class="dropdown-item" href="/control/cancelledOrders">Cancelled Orders</a></li>
+                <li><a class="dropdown-item" href="/control/emiOrders">EMI Orders</a></li>
+                <li><a class="dropdown-item" href="/control/incompleteOrders">Incomplete Orders</a></li>
+              </ul>
+            
+            <a href="/control/priceHike" role="button" class="btn btn-info btn-sm">Price Hike</a>
+            
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

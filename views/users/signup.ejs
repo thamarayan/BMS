@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid cf-signin">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/images/frontImg.png" alt="" class="signin-img">
+        </div>
+        <div class="col-md-8">
+            <main class="form-signin">
+              
+                <form action="/users/signup" method="post">
+                  
+                  <img class="mb-4" src="/images/logo.png" alt="" width="150" height="57">
+
+                  <% if (messages.length>0) { %>
+                    <% messages.forEach(message => { %>
+                
+                        <p><span style="background-color: tomato; color:white; padding: 0.2rem;"><%= message %></span></p>
+                
+                    <% }) %>
+                  <% } %>
+
+                  <h1 class="h3 mb-3 fw-normal">New User? Sign Up!</h1>
+                    
+                  <div class="form-floating">
+                    <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Company Name">
+                    <label for="floatingInput">Company Name</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                  <button class=" btn btn-sm btn-primary" type="submit">Sign Up</button>
+                  
+                </form>
+              </main>
+                    </div>
+  </div>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>
+    
+ 
+    
+    
+        
+  
